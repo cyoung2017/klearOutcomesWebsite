@@ -91,6 +91,16 @@ h4 {
 	height: 50px;
 	background-color: #2196F3;
 }
+.underlineText input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+.underlineText input[type="text"]:focus,
+.underlineText input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+}
 .red {
 	color: #FF3D00;
 	vertical-align: middle;
