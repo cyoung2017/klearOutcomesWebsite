@@ -50,21 +50,31 @@
 			<h1>Place an Order</h1>
 			<br>
 			<div class = "jumbotron jumbo-grey">
-				<ul class="input-list style-4 clearfix">
-					<li>
-						<input type="text" placeholder=":input">
-					</li>
-					<li>
-						<input type="text" placeholder=":focus" class="focus">
-					</li>
-				</ul>
+				<div class="input-list textInput clearfix">
+				    <input type="text" value="patient id">
+				</div>
+                <br>
+                <div class="input-list valueInput clearfix" id = "valueInputField">
+                    
+                </div>
 			</div>
 
 		</div>
 
 	</body>
 	<script>
-		function dataEntry()
+        var prelimValues = ["option one", "option two","option three"];
+        var element = document.getElementById("valueInputField");
+        for(i = 0; i < prelimValues.length; i ++)
+        {
+            var inputValueField = document.createElement("input");
+            inputValueField.setAttribute("type", "text");
+            inputValueField.setAttribute("value", prelimValues[i]);
+        
+            element.appendChild(inputValueField);  
+        }
+        
+		function enterData()
 		{
 
 		}
