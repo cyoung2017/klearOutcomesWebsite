@@ -57,7 +57,7 @@
                     
                 </div>
                 <br>
-                <a href="template.html" class="btn redButton">continue</a>
+                <a class="btn redButton" onclick="enterData();">continue</a>
 			</div>
 
 		</div>
@@ -72,13 +72,18 @@
             var inputValueField = document.createElement("input");
             inputValueField.setAttribute("type", "text");
             inputValueField.setAttribute("value", prelimValues[i]);
+            inputValueField.setAttribute("id", prelimValues[i]);
         
             element.appendChild(inputValueField);  
         }
         
 		function enterData()
 		{
-
+            var inputValues = [];
+            for(i = 0; i < prelimValues.length; i ++)
+            {
+                inputValues[i] = document.getElementById(prelimValues[i]).getAttribute("value");
+            }
 		}
 
 	</script>
